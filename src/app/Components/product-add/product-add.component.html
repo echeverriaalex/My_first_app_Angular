@@ -1,0 +1,23 @@
+<!-- 
+    Comando para generar componentes en una capeta llamada componente
+    ng generate component Components/product-add
+-->
+
+<div>
+    <h2>Add a new product</h2>
+    <form>
+        <div>
+            <label>Description</label>
+            <input type="text" placeholder="Description" name="description" id="description"
+            [(ngModel)] = "description">
+        </div>
+
+        <div>
+            <label>Price</label>
+            <input type="number" placeholder="Price" name="price" id="description"
+            [(ngModel)] = "price">
+        </div>
+        
+        <button type="button" (click)="addProduct()">Add product</button>
+    </form>
+</div>
