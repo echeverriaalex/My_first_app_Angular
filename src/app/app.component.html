@@ -1,2 +1,43 @@
-<app-nav></app-nav>
-<router-outlet></router-outlet>
+<!--
+    <app-nav></app-nav>
+    <router-outlet></router-outlet>
+-->
+<header>
+    <div >
+        <h2>Welcome to Souto Market</h2>
+        <div>
+            <div>
+                <h3>Why choose us ?</h3>
+                <p>
+                    We are a technology company since 1998. 
+                    We always market technological products 
+                    and components at low prices and reliable 
+                    ultra-high quality.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <app-product-add [productList]="productList"></app-product-add>
+    <div class="p-3"></div>
+    <app-product-list [productList]="productList" 
+        (selectedProductEvent)="showSelectedProduct($event)">
+    </app-product-list>
+    <div class="p-3"></div>
+    <h4>Selected vehicle: {{ product.description }} {{ product.price }}</h4>
+</div>
+
+<!-- 
+<footer>
+    <div class="contact">
+        <h3>Contact us through our networks</h3>
+        <p>
+            Whatsapp: 2235678904
+            Facebook and Instagram: TechStorex
+            TechStorex@gmail.com
+        </p>
+    </div> 
+</footer>
+-->

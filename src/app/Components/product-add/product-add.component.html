@@ -3,17 +3,17 @@
     ng generate component Components/product-add
 -->
 
-<div>
-    <h2>Add a new product</h2>
+<div class="container-form">
     <form>
-        <div>
-            <label>Description</label>
+        <h2>Add a new product</h2>
+        <div class="input">
+            <label for="description">Description</label>
             <input type="text" placeholder="Description" name="description" id="description"
             [(ngModel)] = "description">
         </div>
 
-        <div>
-            <label>Price</label>
+        <div class="input">
+            <label for="price">Price</label>
             <input type="number" placeholder="Price" name="price" id="description"
             [(ngModel)] = "price">
         </div>

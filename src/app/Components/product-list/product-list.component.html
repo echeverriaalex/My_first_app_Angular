@@ -1,1 +1,18 @@
-<p>product-list works!</p>
+<h2>Products List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of productList">
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+      <td><button type="button" class="btn btn-success"
+          (click)="selectProduct(product)">Select</button></td>
+    </tr>    
+  </tbody>
+</table>
